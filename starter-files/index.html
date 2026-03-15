@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Google Fonts — replace with your own choices if you prefer -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="logo">YourName</span>
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <!-- Exercise 3: Add position, flex centering, and gradient here -->
+  <section id="hero" class="hero">
+    <h1>Hi, I'm Your Name</h1>
+    <p class="tagline">Front-End Developer · Designer · Creator</p>
+    <a href="#projects" class="btn-primary">See My Work</a>
+  </section>
+
+  <main>
+    <div class="container">
+
+      <!-- ─── ABOUT ─── -->
+      <!-- Exercise 1: Wrap image + text in .about-content and apply Flexbox -->
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img class="profile-photo" src="https://via.placeholder.com/200x200" alt="Profile photo" />
+          <div class="about-text">
+            <p>
+              I'm a passionate developer currently learning web development.
+              I love building things that live on the internet and making them
+              look beautiful and work smoothly.
+            </p>
+            <p>
+              When I'm not coding, you can find me hiking, reading, or exploring
+              new coffee shops. I believe in writing clean, accessible, and
+              well-structured code.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── SKILLS ─── -->
+      <!-- Exercise 1: Wrap skill items in .skills-flex and apply Flexbox -->
+      <section id="skills">
+        <h2>My Skills</h2>
+        <ul class="skills-flex">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Flexbox</li>
+          <li>CSS Grid</li>
+          <li>Responsive Design</li>
+          <li>JavaScript</li>
+          <li>Git & GitHub</li>
+          <li>Accessibility</li>
+        </ul>
+      </section>
+
+      <!-- ─── PROJECTS ─── -->
+      <!-- Exercise 2: Convert this to a CSS Grid of cards -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio built from scratch with HTML and CSS. Fully responsive and accessible.</p>
+            <a href="#">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <h3>Recipe App</h3>
+            <p>A collection of my favourite recipes displayed in a clean grid layout with search functionality.</p>
+            <a href="#">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <h3>Weather Dashboard</h3>
+            <p>A dashboard that fetches and displays live weather data using a public API.</p>
+            <a href="#">View Project</a>
+          </div>
+
+          <!-- Add more project cards here! -->
+
+        </div>
+      </section>
+
+      <!-- ─── CONTACT ─── -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Say hello..."></textarea>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </section>
+
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 YourName. Built with HTML &amp; CSS.</p>
+    </div>
+  </footer>
+
+  <!-- Exercise 3: Back-to-top button -->
+  <a href="#hero" class="back-to-top">↑</a>
+
+</body>
+</html>

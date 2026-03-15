@@ -1,0 +1,356 @@
+/* ============================================================
+   WEEK 6 STARTER — style.css
+   This file picks up from Week 5.
+   Complete each Exercise section as you work through the tasks.
+   ============================================================ */
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── CSS Variables (Design System) ── */
+:root {
+  /* Colors */
+  --color-primary:   #1E3A5F;
+  --color-secondary: #4A90D9;
+  --color-accent:    #E65100;
+  --color-text:      #333333;
+  --color-bg:        #F0F4F8;
+  --color-white:     #ffffff;
+
+  /* Typography */
+  --font-body:    'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* Spacing — Exercise 6: add --space-xs through --space-xl here */
+
+  /* Shadows — Exercise 6: add --shadow-sm, --shadow-md, --shadow-lg here */
+
+  /* Border radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 9999px;
+}
+
+/* ── Base Styles ── */
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+img {
+  /* Exercise 5: make images responsive */
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  padding: 0 20px;
+  /* Exercise 5 (Desktop): add max-width and margin: 0 auto */
+}
+
+/* ── Sections ── */
+section {
+  padding: 60px 0;
+}
+
+/* ============================================================
+   EXERCISE 1 — Flexbox
+   ============================================================ */
+
+/* HEADER — make it a flex row */
+.header-inner {
+  /* TODO: display flex, justify-content space-between, align-items center */
+  padding: 16px 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.nav-links {
+  /* TODO: display flex, gap 24px */
+}
+
+.nav-links a {
+  color: var(--color-text);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  /* Exercise 4: add transition */
+}
+
+/* ABOUT — image left, text right */
+.about-content {
+  /* TODO: display flex, gap 40px, align-items flex-start */
+}
+
+.profile-photo {
+  /* TODO: flex 0 0 200px, border-radius, object-fit cover */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Exercise 6: add grayscale filter */
+}
+
+.about-text {
+  /* TODO: flex 1 */
+}
+
+/* SKILLS — wrapping flex tags */
+.skills-flex {
+  /* TODO: display flex, flex-wrap wrap, gap 12px */
+}
+
+.skills-flex li {
+  /* TODO: flex 1 1 150px, padding, border-radius, background, box-shadow */
+  /* Exercise 4: add :hover transition */
+}
+
+
+/* ============================================================
+   EXERCISE 2 — CSS Grid
+   ============================================================ */
+
+.projects-grid {
+  /* TODO: display grid, grid-template-columns repeat(auto-fill, minmax(280px,1fr)), gap */
+  margin-top: 40px;
+}
+
+.project-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border-top: 4px solid var(--color-secondary);
+  /* Exercise 6: add box-shadow using variable */
+  /* Exercise 4: add transition for transform + box-shadow */
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.project-card a {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  /* Exercise 4: add transition */
+}
+
+
+/* ============================================================
+   EXERCISE 3 — Positioning
+   ============================================================ */
+
+/* HEADER — sticky */
+.site-header {
+  background: var(--color-white);
+  border-bottom: 1px solid #e5e7eb;
+  /* TODO: position sticky, top 0, z-index 100 */
+}
+
+/* HERO — full-viewport flex center */
+.hero {
+  min-height: 100vh;
+  /* TODO: display flex, flex-direction column, justify-content center, align-items center */
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  /* needed for ::before pseudo-element in Exercise 6 */
+  position: relative;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: 2rem;
+  /* Exercise 4: add fadeIn animation */
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 32px;
+  /* Exercise 4: add fadeIn animation with 0.3s delay */
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  /* Exercise 4: add animation with 0.6s delay + transition */
+}
+
+/* BACK-TO-TOP — fixed button */
+.back-to-top {
+  /* TODO: position fixed, bottom 30px, right 30px */
+  /* TODO: width 44px, height 44px, border-radius 50% */
+  /* TODO: display flex, align-items center, justify-content center */
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  /* Exercise 4: add transition */
+}
+
+
+/* ============================================================
+   EXERCISE 4 — Animations & Transitions
+   ============================================================ */
+
+/* TODO: Define @keyframes fadeIn */
+/* @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+} */
+
+/* Add :hover states with transitions for:
+   - .nav-links a
+   - .project-card (translateY + box-shadow)
+   - .project-card a (background-color)
+   - .skills-flex li (scale + background)
+   - .btn-primary (translateY)
+   - .back-to-top (scale)
+*/
+
+
+/* ============================================================
+   EXERCISE 5 — Responsive Design (Mobile First)
+   ============================================================ */
+
+/* Base / Mobile styles are already above (single column, stacked) */
+
+/* TODO: Tablet — min-width: 768px */
+/* @media (min-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  .about-content { flex-direction: row; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: flex; }
+} */
+
+/* TODO: Desktop — min-width: 1024px */
+/* @media (min-width: 1024px) {
+  .container { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 4rem; }
+  .projects-grid { grid-template-columns: repeat(3, 1fr); }
+} */
+
+
+/* ============================================================
+   EXERCISE 6 — Polish: Shadows, Filters & Variables
+   ============================================================ */
+
+/* TODO: Add --shadow-sm, --shadow-md, --shadow-lg to :root above */
+/* TODO: Add grayscale filter to .profile-photo */
+/* TODO: Add .hero::before dark overlay pseudo-element */
+/* TODO: Replace all hard-coded box-shadow values with variables */
+
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: -8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.2);
+}
+
+.btn-submit {
+  align-self: flex-start;
+  padding: 12px 28px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--color-primary);
+  color: rgba(255,255,255,0.8);
+  padding: 32px 0;
+  text-align: center;
+}
